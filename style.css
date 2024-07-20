@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --color-primary: #30CAC8;
+    --color-secondary: #40A09E;
+    --color-accent: #12F5F0;
+    --color-muted: #437574;
+    --color-dark: #374B4A;
+    --color-darker: #2E3333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: var(--color-primary);
+    color: var(--color-darker);
+    overflow-y: auto;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: calc(100vh - 120px);
+    margin-bottom: 120px;
+}
+
+.textoEntregado,
+.textoResultado {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.textoEntregado h2,
+.textoResultado h2 {
+    padding-bottom: 15px;
+}
+
+.textoEntregadoProcesar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoEntregadoProcesar textarea,
+.textoEntregadoProcesar button {
+    margin-bottom: 15px;
+}
+
+.textoEntregadoProcesar textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-accent);
+    border-radius: 15px;
+    font-size: 16px;
+    color: var(--color-dark);
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.textoEntregadoProcesar textarea:focus {
+    border-color: var(--color-dark);
+    box-shadow: 0 0 5px var(--color-dark);
+}
+
+.textoEntregadoProcesar button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.textoEntregadoProcesar button:hover {
+    background-color: var(--color-dark);
+}
+
+.textoEntregado a {
+    text-decoration: none;
+    color: var(--color-accent);
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    margin: 15px 0px;
+    transition: all 0.3s ease;
+}
+
+.textoEntregado a:hover {
+    background-color: white;
+    color: var(--color-dark);
+    border-color: var(--color-accent);
+    font-weight: bold;
+}
+
+.resultado {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--color-accent);
+    border-radius: 15px;
+    font-size: 16px;
+    color: var(--color-dark);
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.textoResultado button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.textoResultado button:hover {
+    background-color: var(--color-dark);
+}
+
+.textoResultado p:last-child {
+    padding: 15px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+footer div {
+    width: 20%;
+    text-align: center;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+footer h3,
+footer p {
+    padding-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-accent);
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    margin: 15px 0px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: white;
+    color: var(--color-dark);
+    border-color: var(--color-accent);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    main.container {
+        padding: 10px;
+    }
+
+    .textoEntregado,
+    .textoResultado {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer div {
+        width: 100%;
+    }
+}

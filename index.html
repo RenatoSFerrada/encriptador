@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Encripta tu texto</h1>
+    </header>
+    <main class="container">
+        <div class="textoEntregado">
+            <h2>¿Qué te gustaría encriptar?</h2>
+            <div class="textoEntregadoProcesar">
+                <textarea id="textoAEncriptar" name="textoAEncriptar" rows="4" cols="50"></textarea>
+                <button type="button" onclick="encriptar()">Encriptar</button> 
+                <button type="button" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+        <div class="textoResultado">
+            <h2>Resultado</h2>
+            <p class="resultado" id="textoEncriptado"></p>
+            <button type="button" onclick="copiar()">Copiar</button>
+            <p class="copiado"></p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h3>Creador</h3>
+            <p>Renato Salinas Ferrada</p>
+            <h3>Redes</h3>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
